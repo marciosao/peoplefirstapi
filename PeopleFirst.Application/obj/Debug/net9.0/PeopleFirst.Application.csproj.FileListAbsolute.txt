@@ -1,0 +1,15 @@
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.csproj.AssemblyReference.cache
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.AssemblyInfoInputs.cache
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.AssemblyInfo.cs
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.csproj.CoreCompileInputs.cache
+D:\Projetos\PeopleFirst\PeopleFirst.Application\bin\Debug\net9.0\PeopleFirst.Application.deps.json
+D:\Projetos\PeopleFirst\PeopleFirst.Application\bin\Debug\net9.0\PeopleFirst.Application.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Application\bin\Debug\net9.0\PeopleFirst.Application.pdb
+D:\Projetos\PeopleFirst\PeopleFirst.Application\bin\Debug\net9.0\PeopleFirst.Domain.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Application\bin\Debug\net9.0\PeopleFirst.Domain.pdb
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFi.30911453.Up2Date
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\refint\PeopleFirst.Application.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.pdb
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\ref\PeopleFirst.Application.dll

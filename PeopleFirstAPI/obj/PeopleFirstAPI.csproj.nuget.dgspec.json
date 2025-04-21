@@ -1,0 +1,304 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projetos\\PeopleFirst\\PeopleFirstAPI\\PeopleFirstAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj",
+        "projectName": "PeopleFirst.Application",
+        "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj",
+        "projectName": "PeopleFirst.Domain",
+        "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\PeopleFirst.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\PeopleFirst.Infra.Data.csproj",
+        "projectName": "PeopleFirst.Infra.Data",
+        "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\PeopleFirst.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj"
+              },
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0-preview.3.efcore.9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\PeopleFirst\\PeopleFirstAPI\\PeopleFirstAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\PeopleFirst\\PeopleFirstAPI\\PeopleFirstAPI.csproj",
+        "projectName": "PeopleFirstAPI",
+        "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirstAPI\\PeopleFirstAPI.csproj",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\PeopleFirst\\PeopleFirstAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Application\\PeopleFirst.Application.csproj"
+              },
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Domain\\PeopleFirst.Domain.csproj"
+              },
+              "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\PeopleFirst.Infra.Data.csproj": {
+                "projectPath": "D:\\Projetos\\PeopleFirst\\PeopleFirst.Infra.Data\\PeopleFirst.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

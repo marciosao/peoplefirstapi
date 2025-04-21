@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "BJTdMxFMIyj+FavTvmjAQvK2OSnrAaTFBiXR9/fS5UM=",
+  "Source": "PeopleFirstAPI",
+  "BasePath": "_content/PeopleFirstAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

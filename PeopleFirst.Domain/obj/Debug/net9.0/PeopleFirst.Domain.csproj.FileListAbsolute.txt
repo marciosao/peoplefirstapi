@@ -1,0 +1,11 @@
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\bin\Debug\net9.0\PeopleFirst.Domain.deps.json
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\bin\Debug\net9.0\PeopleFirst.Domain.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\bin\Debug\net9.0\PeopleFirst.Domain.pdb
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.AssemblyInfoInputs.cache
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.AssemblyInfo.cs
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.csproj.CoreCompileInputs.cache
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\refint\PeopleFirst.Domain.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.pdb
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\ref\PeopleFirst.Domain.dll

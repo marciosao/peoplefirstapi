@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PeopleFirst.Application/1.0.0": {
+        "dependencies": {
+          "PeopleFirst.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PeopleFirst.Application.dll": {}
+        }
+      },
+      "PeopleFirst.Domain/1.0.0": {
+        "runtime": {
+          "PeopleFirst.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PeopleFirst.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PeopleFirst.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
