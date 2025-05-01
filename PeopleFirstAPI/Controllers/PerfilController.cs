@@ -53,5 +53,14 @@ namespace PeopleFirstAPI.Controllers
             await _perfilApp.DeleteAsync(id);
             return NoContent();
         }
+
+        [HttpGet("paginado")]
+        public async Task<IActionResult> ListarPaginado([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        {
+            var resultado = await _perfilApp.ListarPaginadoAsync(page, pageSize);
+            var response = new ApiResponse<PagedResult<PerfilDto>>(resultado);
+            return Ok(resultado);
+        }
+
     }
 }

@@ -9,5 +9,9 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(Happiness h);
         Task UpdateAsync(Happiness h);
         Task DeleteAsync(int id);
+
+        Task<int> ContarAsync();
+        Task<IEnumerable<Happiness>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

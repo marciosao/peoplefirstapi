@@ -45,5 +45,20 @@ namespace PeopleFirst.Infra.Data.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<int> ContarAsync()
+        {
+            return await _context.QuestaoPilar.CountAsync();
+        }
+
+        public async Task<IEnumerable<QuestaoPilar>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            return await _context.QuestaoPilar
+                                 .OrderBy(q => q.Questao)
+                                 .Skip((page - 1) * pageSize)
+                                 .Take(pageSize)
+                                 .ToListAsync();
+        }
+
     }
 }

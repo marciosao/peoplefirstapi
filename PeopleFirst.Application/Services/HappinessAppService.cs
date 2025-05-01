@@ -83,5 +83,26 @@ namespace PeopleFirst.Application.Services
         {
             await _repository.DeleteAsync(id);
         }
+
+        public async Task<PagedResult<HappinessDto>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            var total = await _repository.ContarAsync();
+            var registros = await _repository.ListarPaginadoAsync(page, pageSize);
+
+            var dtos = registros.Select(h => new HappinessDto
+            {
+                Id = h.Id,
+                IdColaborador = h.IdColaborador,
+                Data = h.Data,
+                NotaGeral = h.NotaGeral,
+                AvaliacaoGeral = h.AvaliacaoGeral,
+                ColaboradorId = h.ColaboradorId,
+                ColaboradorPerfilId = h.ColaboradorPerfilId,
+                NomeColaborador = h.Colaborador?.Nome
+            });
+
+            return new PagedResult<HappinessDto>(dtos, total, page, pageSize);
+        }
+
     }
 }

@@ -14,7 +14,7 @@ namespace PeopleFirst.Application.Services
             IPilarCompetenciaRepository repository)
         {
             _repository = repository;
-           // _tipoPerfilRepository = tipoPerfilRepository;
+            // _tipoPerfilRepository = tipoPerfilRepository;
         }
 
         public async Task<IEnumerable<PilarCompetenciaDto>> GetAllAsync()
@@ -78,5 +78,23 @@ namespace PeopleFirst.Application.Services
         {
             await _repository.DeleteAsync(id);
         }
+
+        public async Task<PagedResult<PilarCompetenciaDto>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            var total = await _repository.ContarAsync();
+            var pilares = await _repository.ListarPaginadoAsync(page, pageSize);
+
+            var dtos = pilares.Select(p => new PilarCompetenciaDto
+            {
+                Id = p.Id,
+                Pilar = p.Pilar,
+                Descricao = p.Descricao,
+                PerfilNome = p.Perfil?.PerfilNome,
+                TipoCompetenciaNome = p.TipoCompetencia?.Tipo
+            });
+
+            return new PagedResult<PilarCompetenciaDto>(dtos, total, page, pageSize);
+        }
+
     }
 }

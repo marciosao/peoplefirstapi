@@ -53,5 +53,14 @@ namespace PeopleFirstAPI.Controllers
             await _service.DeleteAsync(id);
             return NoContent();
         }
+
+        [HttpGet("paginado")]
+        public async Task<IActionResult> ListarPaginado([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        {
+            var resultado = await _service.ListarPaginadoAsync(page, pageSize);
+            var response = new ApiResponse<PagedResult<PilarHappinessDto>>(resultado);
+            return Ok(resultado);
+        }
+
     }
 }

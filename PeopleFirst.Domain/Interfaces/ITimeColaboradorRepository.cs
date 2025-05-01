@@ -9,5 +9,8 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(TimeColaborador item);
         Task UpdateAsync(TimeColaborador item);
         Task DeleteAsync(int id);
+        Task<int> ContarAsync();
+        Task<IEnumerable<TimeColaborador>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

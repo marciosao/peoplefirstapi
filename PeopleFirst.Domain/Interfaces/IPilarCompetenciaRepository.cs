@@ -9,5 +9,8 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(PilarCompetencia pilar);
         Task UpdateAsync(PilarCompetencia pilar);
         Task DeleteAsync(int id);
+        Task<int> ContarAsync();
+        Task<IEnumerable<PilarCompetencia>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

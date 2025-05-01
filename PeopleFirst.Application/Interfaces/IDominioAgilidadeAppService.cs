@@ -9,5 +9,6 @@ namespace PeopleFirst.Application.Interfaces
         Task AddAsync(DominioAgilidadeDto dto);
         Task UpdateAsync(DominioAgilidadeDto dto);
         Task DeleteAsync(int id);
+        Task<PagedResult<DominioAgilidadeDto>> ListarPaginadoAsync(int page, int pageSize);
     }
 }

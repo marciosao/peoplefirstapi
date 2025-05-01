@@ -9,5 +9,7 @@ namespace PeopleFirst.Application.Interfaces
         Task AddAsync(PilarHappinessDto dto);
         Task UpdateAsync(PilarHappinessDto dto);
         Task DeleteAsync(int id);
+        Task<PagedResult<PilarHappinessDto>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

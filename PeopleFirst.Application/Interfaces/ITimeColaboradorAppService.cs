@@ -9,5 +9,6 @@ namespace PeopleFirst.Application.Interfaces
         Task AddAsync(TimeColaboradorDto dto);
         Task UpdateAsync(TimeColaboradorDto dto);
         Task DeleteAsync(int id);
+        Task<PagedResult<TimeColaboradorDto>> ListarPaginadoAsync(int page, int pageSize);
     }
 }

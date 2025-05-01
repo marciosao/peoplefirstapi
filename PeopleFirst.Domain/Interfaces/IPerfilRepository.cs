@@ -9,5 +9,9 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(Perfil perfil);
         Task UpdateAsync(Perfil perfil);
         Task DeleteAsync(int id);
+
+        Task<int> ContarAsync();
+        Task<IEnumerable<Perfil>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

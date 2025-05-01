@@ -14,15 +14,7 @@ using PeopleFirst.Application.Interfaces;
 public class AuthController : ControllerBase
 {
     private readonly JwtSettings _jwtSettings;
-    // private readonly IColaboradorRepository _colaboradorRepository;
     private readonly IColaboradorAppService _colaboradorRepository;
-
-    // public AuthController(IOptions<JwtSettings> jwtSettings)
-    // {
-    //     _jwtSettings = jwtSettings.Value;
-    //     _colaboradorRepository = colaboradorRepository;
-    // }
-
 
     public AuthController(IOptions<JwtSettings> jwtSettings, IColaboradorAppService colaboradorRepository)
     {
@@ -61,7 +53,8 @@ public class AuthController : ControllerBase
         };
 
         var token = tokenHandler.CreateToken(tokenDescriptor);
-        return Ok(new { Token = tokenHandler.WriteToken(token) });        
+        // return Ok(new { Token = tokenHandler.WriteToken(token) });        
+        return Ok(new ApiResponse<object>(new { Token = tokenHandler.WriteToken(token) }));
     }
 }
 

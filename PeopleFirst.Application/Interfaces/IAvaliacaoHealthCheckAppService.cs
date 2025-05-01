@@ -9,5 +9,6 @@ namespace PeopleFirst.Application.Interfaces
         Task AddAsync(AvaliacaoHealthCheckDto dto);
         Task UpdateAsync(AvaliacaoHealthCheckDto dto);
         Task DeleteAsync(int id);
+        Task<PagedResult<AvaliacaoHealthCheckDto>> ListarPaginadoAsync(int page, int pageSize);
     }
 }

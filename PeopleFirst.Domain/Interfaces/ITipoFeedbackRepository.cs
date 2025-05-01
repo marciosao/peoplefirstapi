@@ -9,5 +9,9 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(TipoFeedback tipo);
         Task UpdateAsync(TipoFeedback tipo);
         Task DeleteAsync(int id);
+
+        Task<int> ContarAsync();
+        Task<IEnumerable<TipoFeedback>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

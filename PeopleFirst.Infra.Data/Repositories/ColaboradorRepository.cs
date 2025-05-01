@@ -52,5 +52,21 @@ namespace PeopleFirst.Infra.Data.Repositories
             return _context.Colaboradores
                 .FirstOrDefault(c => c.Email == email && c.Ativo == true);
         }
+
+        public async Task<int> ContarAsync()
+        {
+            return await _context.Colaboradores.CountAsync();
+        }
+
+        public async Task<IEnumerable<Colaborador>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            return await _context.Colaboradores
+                                .Include(c => c.Perfil)
+                                .Skip((page - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+        }
+
+
     }
 }

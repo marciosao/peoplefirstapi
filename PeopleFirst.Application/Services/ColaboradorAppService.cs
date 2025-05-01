@@ -113,5 +113,27 @@ namespace PeopleFirst.Application.Services
             };
         }
 
+        public async Task<PagedResult<ColaboradorDto>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            var total = await _repository.ContarAsync();
+            var colaboradores = await _repository.ListarPaginadoAsync(page, pageSize);
+
+            var dtos = colaboradores.Select(c => new ColaboradorDto
+            {
+                Id = c.Id,
+                Nome = c.Nome,
+                Email = c.Email,
+                SenhaHash = c.SenhaHash,
+                DataNascimento = c.DataNascimento,
+                Cargo = c.Cargo,
+                Ativo = c.Ativo,
+                Foto = c.Foto,
+                PerfilId = c.PerfilId,
+                PerfilNome = c.Perfil?.PerfilNome
+            });
+
+            return new PagedResult<ColaboradorDto>(dtos, total, page, pageSize);
+        }
+
     }
 }

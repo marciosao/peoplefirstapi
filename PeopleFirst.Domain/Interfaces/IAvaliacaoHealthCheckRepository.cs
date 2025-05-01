@@ -9,5 +9,7 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(AvaliacaoHealthCheck entity);
         Task UpdateAsync(AvaliacaoHealthCheck entity);
         Task DeleteAsync(int id);
+        Task<int> ContarAsync();
+        Task<IEnumerable<AvaliacaoHealthCheck>> ListarPaginadoAsync(int page, int pageSize);
     }
 }

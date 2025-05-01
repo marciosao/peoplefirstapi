@@ -10,5 +10,8 @@ namespace PeopleFirst.Application.Interfaces
         Task UpdateAsync(ColaboradorDto dto);
         Task DeleteAsync(int id);
         Task<ColaboradorDto?> BuscarPorEmail(string email);
+
+        Task<PagedResult<ColaboradorDto>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

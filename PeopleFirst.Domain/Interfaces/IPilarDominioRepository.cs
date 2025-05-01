@@ -9,5 +9,7 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(PilarDominio entity);
         Task UpdateAsync(PilarDominio entity);
         Task DeleteAsync(int id);
+        Task<int> ContarAsync();
+        Task<IEnumerable<PilarDominio>> ListarPaginadoAsync(int page, int pageSize);
     }
 }

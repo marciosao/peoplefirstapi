@@ -9,5 +9,8 @@ namespace PeopleFirst.Application.Interfaces
         Task AddAsync(TipoCompetenciaDto dto);
         Task UpdateAsync(TipoCompetenciaDto dto);
         Task DeleteAsync(int id);
+
+        Task<PagedResult<TipoCompetenciaDto>> ListarPaginadoAsync(int page, int pageSize);
+
     }
 }

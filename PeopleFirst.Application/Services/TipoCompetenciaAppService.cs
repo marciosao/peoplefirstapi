@@ -61,5 +61,20 @@ namespace PeopleFirst.Application.Services
         {
             await _repository.DeleteAsync(id);
         }
+
+        public async Task<PagedResult<TipoCompetenciaDto>> ListarPaginadoAsync(int page, int pageSize)
+        {
+            var total = await _repository.ContarAsync();
+            var tipos = await _repository.ListarPaginadoAsync(page, pageSize);
+
+            var dtos = tipos.Select(t => new TipoCompetenciaDto
+            {
+                Id = t.Id,
+                Tipo = t.Tipo
+            });
+
+            return new PagedResult<TipoCompetenciaDto>(dtos, total, page, pageSize);
+        }
+
     }
 }
