@@ -145,3 +145,4 @@ D:\Projetos\PeopleFirst\PeopleFirstAPI\obj\Debug\net9.0\refint\PeopleFirstAPI.dl
 D:\Projetos\PeopleFirst\PeopleFirstAPI\obj\Debug\net9.0\PeopleFirstAPI.pdb
 D:\Projetos\PeopleFirst\PeopleFirstAPI\obj\Debug\net9.0\PeopleFirstAPI.genruntimeconfig.cache
 D:\Projetos\PeopleFirst\PeopleFirstAPI\obj\Debug\net9.0\ref\PeopleFirstAPI.dll
+D:\Projetos\PeopleFirst\PeopleFirstAPI\obj\Debug\net9.0\PeopleFirstAPI.sourcelink.json

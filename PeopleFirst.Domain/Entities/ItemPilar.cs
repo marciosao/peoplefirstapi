@@ -7,7 +7,7 @@ namespace PeopleFirst.Domain.Entities
         public string? Descricao { get; set; }
 
         // Chave estrangeira
-        public int PilarCompetenciaId { get; set; }
+        public int IdPilarCompetencia { get; set; }
 
         // Navegação
         public PilarCompetencia PilarCompetencia { get; set; } = null!;

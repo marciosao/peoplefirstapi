@@ -50,6 +50,7 @@ namespace PeopleFirst.Infra.Data.Context
 
                 entity.Property(e => e.Nome).HasColumnName("nome");
                 entity.Property(e => e.Email).HasColumnName("email");
+                entity.Property(e => e.SenhaHash).HasColumnName("SenhaHash");
                 entity.Property(e => e.DataNascimento).HasColumnName("datanascimento");
                 entity.Property(e => e.Cargo).HasColumnName("cargo");
                 entity.Property(e => e.Ativo).HasColumnName("ativo");
@@ -101,11 +102,11 @@ namespace PeopleFirst.Infra.Data.Context
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.Item).HasColumnName("item");
                 entity.Property(e => e.Descricao).HasColumnName("descricao");
-                entity.Property(e => e.PilarCompetenciaId).HasColumnName("pilarCompetencia_id");
+                entity.Property(e => e.IdPilarCompetencia).HasColumnName("IdPilarCompetencia");
 
                 entity.HasOne(e => e.PilarCompetencia)
                     .WithMany()
-                    .HasForeignKey(e => e.PilarCompetenciaId);
+                    .HasForeignKey(e => e.IdPilarCompetencia);
             });
 
             modelBuilder.Entity<AvaliacaoColaboradorItemPilar>(entity =>

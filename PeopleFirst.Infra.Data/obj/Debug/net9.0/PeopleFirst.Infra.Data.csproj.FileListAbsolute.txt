@@ -17,3 +17,4 @@ D:\Projetos\PeopleFirst\PeopleFirst.Infra.Data\obj\Debug\net9.0\refint\PeopleFir
 D:\Projetos\PeopleFirst\PeopleFirst.Infra.Data\obj\Debug\net9.0\PeopleFirst.Infra.Data.pdb
 D:\Projetos\PeopleFirst\PeopleFirst.Infra.Data\obj\Debug\net9.0\PeopleFirst.Infra.Data.genruntimeconfig.cache
 D:\Projetos\PeopleFirst\PeopleFirst.Infra.Data\obj\Debug\net9.0\ref\PeopleFirst.Infra.Data.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Infra.Data\obj\Debug\net9.0\PeopleFirst.Infra.Data.sourcelink.json

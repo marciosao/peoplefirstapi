@@ -188,6 +188,11 @@ namespace PeopleFirst.Infra.Data.Migrations
                         .HasColumnType("int")
                         .HasColumnName("idPerfil");
 
+                    b.Property<string>("SenhaHash")
+                        .IsRequired()
+                        .HasColumnType("longtext")
+                        .HasColumnName("SenhaHash");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PerfilId");
@@ -348,22 +353,22 @@ namespace PeopleFirst.Infra.Data.Migrations
                         .HasColumnType("longtext")
                         .HasColumnName("descricao");
 
+                    b.Property<int>("IdPilarCompetencia")
+                        .HasColumnType("int")
+                        .HasColumnName("IdPilarCompetencia");
+
                     b.Property<string>("Item")
                         .HasColumnType("longtext")
                         .HasColumnName("item");
 
-                    b.Property<int>("PilarCompetenciaId")
-                        .HasColumnType("int")
-                        .HasColumnName("pilarCompetencia_id");
-
-                    b.Property<int?>("PilarCompetenciaId1")
+                    b.Property<int?>("PilarCompetenciaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PilarCompetenciaId");
+                    b.HasIndex("IdPilarCompetencia");
 
-                    b.HasIndex("PilarCompetenciaId1");
+                    b.HasIndex("PilarCompetenciaId");
 
                     b.ToTable("itempilar", (string)null);
                 });
@@ -732,13 +737,13 @@ namespace PeopleFirst.Infra.Data.Migrations
                 {
                     b.HasOne("PeopleFirst.Domain.Entities.PilarCompetencia", "PilarCompetencia")
                         .WithMany()
-                        .HasForeignKey("PilarCompetenciaId")
+                        .HasForeignKey("IdPilarCompetencia")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PeopleFirst.Domain.Entities.PilarCompetencia", null)
                         .WithMany("Itens")
-                        .HasForeignKey("PilarCompetenciaId1");
+                        .HasForeignKey("PilarCompetenciaId");
 
                     b.Navigation("PilarCompetencia");
                 });

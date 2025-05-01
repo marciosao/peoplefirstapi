@@ -25,7 +25,7 @@ namespace PeopleFirst.Application.Services
                 Id = i.Id,
                 Item = i.Item,
                 Descricao = i.Descricao,
-                PilarCompetenciaId = i.PilarCompetenciaId,
+                IdPilarCompetencia = i.IdPilarCompetencia,
                 NomePilar = i.PilarCompetencia?.Pilar
             });
         }
@@ -40,7 +40,7 @@ namespace PeopleFirst.Application.Services
                 Id = i.Id,
                 Item = i.Item,
                 Descricao = i.Descricao,
-                PilarCompetenciaId = i.PilarCompetenciaId,
+                IdPilarCompetencia = i.IdPilarCompetencia,
                 NomePilar = i.PilarCompetencia?.Pilar
             };
         }
@@ -51,7 +51,7 @@ namespace PeopleFirst.Application.Services
             {
                 Item = dto.Item,
                 Descricao = dto.Descricao,
-                PilarCompetenciaId = dto.PilarCompetenciaId
+                IdPilarCompetencia = dto.IdPilarCompetencia
             };
 
             await _repository.AddAsync(item);
@@ -64,7 +64,7 @@ namespace PeopleFirst.Application.Services
 
             item.Item = dto.Item;
             item.Descricao = dto.Descricao;
-            item.PilarCompetenciaId = dto.PilarCompetenciaId;
+            item.IdPilarCompetencia = dto.IdPilarCompetencia;
 
             await _repository.UpdateAsync(item);
         }

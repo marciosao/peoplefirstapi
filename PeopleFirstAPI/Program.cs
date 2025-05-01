@@ -19,6 +19,10 @@ var jwtSection = builder.Configuration.GetSection("JwtSettings");
 builder.Services.Configure<JwtSettings>(jwtSection);
 
 var jwtSettings = jwtSection.Get<JwtSettings>();
+
+if (string.IsNullOrWhiteSpace(jwtSettings.SecretKey))
+    throw new InvalidOperationException("A chave secreta JWT está ausente no appsettings.json");
+
 var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);    
 
 
@@ -107,7 +111,6 @@ builder.Services.AddScoped<IPilarDominioRepository, PilarDominioRepository>();
 builder.Services.AddScoped<IQuestaoPilarRepository, QuestaoPilarRepository>();
 builder.Services.AddScoped<IHealthCheckRepository, HealthCheckRepository>();
 builder.Services.AddScoped<IAvaliacaoHealthCheckRepository, AvaliacaoHealthCheckRepository>();
-
 
 
 builder.Services.AddScoped<IPerfilAppService, PerfilAppService>();

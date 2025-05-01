@@ -141,6 +141,8 @@ namespace PeopleFirst.Infra.Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    SenhaHash = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     datanascimento = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     cargo = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -373,23 +375,23 @@ namespace PeopleFirst.Infra.Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     descricao = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    pilarCompetencia_id = table.Column<int>(type: "int", nullable: false),
-                    PilarCompetenciaId1 = table.Column<int>(type: "int", nullable: true)
+                    IdPilarCompetencia = table.Column<int>(type: "int", nullable: false),
+                    PilarCompetenciaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_itempilar", x => x.id);
                     table.ForeignKey(
-                        name: "FK_itempilar_PilarCompetencia_PilarCompetenciaId1",
-                        column: x => x.PilarCompetenciaId1,
-                        principalTable: "PilarCompetencia",
-                        principalColumn: "id");
-                    table.ForeignKey(
-                        name: "FK_itempilar_PilarCompetencia_pilarCompetencia_id",
-                        column: x => x.pilarCompetencia_id,
+                        name: "FK_itempilar_PilarCompetencia_IdPilarCompetencia",
+                        column: x => x.IdPilarCompetencia,
                         principalTable: "PilarCompetencia",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_itempilar_PilarCompetencia_PilarCompetenciaId",
+                        column: x => x.PilarCompetenciaId,
+                        principalTable: "PilarCompetencia",
+                        principalColumn: "id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -539,14 +541,14 @@ namespace PeopleFirst.Infra.Data.Migrations
                 column: "TimeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_itempilar_pilarCompetencia_id",
+                name: "IX_itempilar_IdPilarCompetencia",
                 table: "itempilar",
-                column: "pilarCompetencia_id");
+                column: "IdPilarCompetencia");
 
             migrationBuilder.CreateIndex(
-                name: "IX_itempilar_PilarCompetenciaId1",
+                name: "IX_itempilar_PilarCompetenciaId",
                 table: "itempilar",
-                column: "PilarCompetenciaId1");
+                column: "PilarCompetenciaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OpiniaoPilarHappiness_happiness_id",

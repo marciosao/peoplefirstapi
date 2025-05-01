@@ -9,3 +9,4 @@ D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.d
 D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\refint\PeopleFirst.Domain.dll
 D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.pdb
 D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\ref\PeopleFirst.Domain.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Domain\obj\Debug\net9.0\PeopleFirst.Domain.sourcelink.json

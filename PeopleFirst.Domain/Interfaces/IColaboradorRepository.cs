@@ -9,5 +9,6 @@ namespace PeopleFirst.Domain.Interfaces
         Task AddAsync(Colaborador colaborador);
         Task UpdateAsync(Colaborador colaborador);
         Task DeleteAsync(int id);
+        Task<Colaborador?> BuscarPorEmail(string email);
     }
 }

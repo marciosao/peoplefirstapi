@@ -13,3 +13,4 @@ D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.App
 D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\refint\PeopleFirst.Application.dll
 D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.pdb
 D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\ref\PeopleFirst.Application.dll
+D:\Projetos\PeopleFirst\PeopleFirst.Application\obj\Debug\net9.0\PeopleFirst.Application.sourcelink.json

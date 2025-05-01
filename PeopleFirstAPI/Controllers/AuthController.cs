@@ -5,7 +5,8 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using PeopleFirstAPI.Configurations;
-
+using PeopleFirst.Application.DTOs;
+using PeopleFirst.Application.Interfaces;
 
 
 [Route("api/auth")]
@@ -13,42 +14,54 @@ using PeopleFirstAPI.Configurations;
 public class AuthController : ControllerBase
 {
     private readonly JwtSettings _jwtSettings;
+    // private readonly IColaboradorRepository _colaboradorRepository;
+    private readonly IColaboradorAppService _colaboradorRepository;
 
-    public AuthController(IOptions<JwtSettings> jwtSettings)
+    // public AuthController(IOptions<JwtSettings> jwtSettings)
+    // {
+    //     _jwtSettings = jwtSettings.Value;
+    //     _colaboradorRepository = colaboradorRepository;
+    // }
+
+
+    public AuthController(IOptions<JwtSettings> jwtSettings, IColaboradorAppService colaboradorRepository)
     {
         _jwtSettings = jwtSettings.Value;
-}
+        _colaboradorRepository = colaboradorRepository;
+    }
 
     [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginRequest request)
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
-        if (request.Username == "admin" && request.Password == "1234")
+        if (string.IsNullOrWhiteSpace(request.Username) || string.IsNullOrWhiteSpace(request.Password))
+            return BadRequest("Email e senha são obrigatórios.");
+
+        var colaborador = await _colaboradorRepository.BuscarPorEmail(request.Username);
+
+        if (colaborador == null || !PasswordHasher.Verify(request.Username, colaborador.SenhaHash))
+            return Unauthorized("Usuário ou senha inválidos.");
+
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.SecretKey);
+
+        var tokenDescriptor = new SecurityTokenDescriptor
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            
-            var key = Encoding.UTF8.GetBytes(_jwtSettings.SecretKey);
-
-            var tokenDescriptor = new SecurityTokenDescriptor
+            Subject = new ClaimsIdentity(new[]
             {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.Name, request.Username),
-                    new Claim(ClaimTypes.Role, "Admin")
-                }),
-                Expires = DateTime.UtcNow.AddHours(1),
-                Issuer = _jwtSettings.Issuer,
-                Audience = _jwtSettings.Audience,
-                SigningCredentials = new SigningCredentials(
-                    new SymmetricSecurityKey(key),
-                    SecurityAlgorithms.HmacSha256
-                )
-            };            
+                new Claim(ClaimTypes.Name, colaborador.Nome),
+                new Claim(ClaimTypes.NameIdentifier, colaborador.Id.ToString()),
+                // new Claim(ClaimTypes.Role, colaborador.PerfilNome) // ou PerfilId
+                new Claim(ClaimTypes.Role, colaborador.PerfilNome ?? "")
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return Ok(new { Token = tokenHandler.WriteToken(token) });
-        }
+            }),
+            Expires = DateTime.UtcNow.AddHours(1),
+            Issuer = _jwtSettings.Issuer,
+            Audience = _jwtSettings.Audience,
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
+        };
 
-        return Unauthorized("Usuário ou senha inválidos.");
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        return Ok(new { Token = tokenHandler.WriteToken(token) });        
     }
 }
 

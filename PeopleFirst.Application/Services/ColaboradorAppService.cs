@@ -24,6 +24,7 @@ namespace PeopleFirst.Application.Services
                 Id = c.Id,
                 Nome = c.Nome,
                 Email = c.Email,
+                SenhaHash = c.SenhaHash,
                 DataNascimento = c.DataNascimento,
                 Cargo = c.Cargo,
                 Ativo = c.Ativo,
@@ -43,6 +44,7 @@ namespace PeopleFirst.Application.Services
                 Id = c.Id,
                 Nome = c.Nome,
                 Email = c.Email,
+                SenhaHash = c.SenhaHash,
                 DataNascimento = c.DataNascimento,
                 Cargo = c.Cargo,
                 Ativo = c.Ativo,
@@ -58,6 +60,7 @@ namespace PeopleFirst.Application.Services
             {
                 Nome = dto.Nome,
                 Email = dto.Email,
+                SenhaHash = dto.SenhaHash,
                 DataNascimento = dto.DataNascimento,
                 Cargo = dto.Cargo,
                 Ativo = dto.Ativo,
@@ -75,6 +78,7 @@ namespace PeopleFirst.Application.Services
 
             colaborador.Nome = dto.Nome;
             colaborador.Email = dto.Email;
+            colaborador.SenhaHash = dto.SenhaHash;
             colaborador.DataNascimento = dto.DataNascimento;
             colaborador.Cargo = dto.Cargo;
             colaborador.Ativo = dto.Ativo;
@@ -88,5 +92,26 @@ namespace PeopleFirst.Application.Services
         {
             await _repository.DeleteAsync(id);
         }
+
+        public async Task<ColaboradorDto?> BuscarPorEmail(string email)
+        {
+            var c = await _repository.BuscarPorEmail(email);
+            if (c == null) return null;
+
+            return new ColaboradorDto
+            {
+                Id = c.Id,
+                Nome = c.Nome,
+                Email = c.Email,
+                SenhaHash = c.SenhaHash,
+                DataNascimento = c.DataNascimento,
+                Cargo = c.Cargo,
+                Ativo = c.Ativo,
+                Foto = c.Foto,
+                PerfilId = c.PerfilId,
+                PerfilNome = c.Perfil?.PerfilNome
+            };
+        }
+
     }
 }

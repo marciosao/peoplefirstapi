@@ -46,5 +46,11 @@ namespace PeopleFirst.Infra.Data.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<Colaborador?> BuscarPorEmail(string email)
+        {
+            return _context.Colaboradores
+                .FirstOrDefault(c => c.Email == email && c.Ativo == true);
+        }
     }
 }
