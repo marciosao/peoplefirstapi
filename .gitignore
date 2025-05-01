@@ -1,0 +1,21 @@
+# Arquivos de build .NET
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.sourcelink.json
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Migrations que não serão versionadas
+PeopleFirst.Infra.Data/Migrations/*.Designer.cs
+PeopleFirst.Infra.Data/Migrations/*.csproj
+
+# Arquivos temporários
+*.user
+*.suo
+*.log
+*.tmp
