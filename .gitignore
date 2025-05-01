@@ -1,21 +1,69 @@
-# Arquivos de build .NET
+##########################################
+# .NET / C# Build Artifacts
+##########################################
 bin/
 obj/
 *.dll
-*.pdb
 *.exe
+*.pdb
+*.cache
+*.log
 *.sourcelink.json
 
-# VS Code
+##########################################
+# User-specific files
+##########################################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 .vscode/
 *.code-workspace
 
-# Migrations que não serão versionadas
-PeopleFirst.Infra.Data/Migrations/*.Designer.cs
-PeopleFirst.Infra.Data/Migrations/*.csproj
+##########################################
+# ASP.NET Temporary Files
+##########################################
+*.dbmdl
+*.bak
+*.mdf
+*.ldf
 
-# Arquivos temporários
-*.user
-*.suo
+##########################################
+# Entity Framework Migrations (Designer)
+##########################################
+**/Migrations/*.Designer.cs
+**/Migrations/*Snapshot.cs
+
+##########################################
+# Configuration Files
+##########################################
+secrets.json
+launchSettings.json
+appsettings.Development.json
+
+##########################################
+# Test results and build outputs
+##########################################
+TestResults/
+*.nupkg
+*.snupkg
+
+##########################################
+# JetBrains Rider / VS for Mac
+##########################################
+.idea/
+*.sln.iml
+
+##########################################
+# Logs
+##########################################
 *.log
+
+##########################################
+# Others
+##########################################
+*.vs/
+_ReSharper*/
 *.tmp
+.DS_Store
+Thumbs.db
